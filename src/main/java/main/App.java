@@ -30,7 +30,7 @@ public class App
                     case 1:
                         System.out.println("Anna hirviön tyyppi:");
                         String type = sc.nextLine();
-                        System.out.println("Anna hirviön elämän määrä numeroina:");
+                        System.out.println("Anna hirviön elämän määrä numerona:");
                         String stringHealth = sc.nextLine();
                         int health = Integer.parseInt(stringHealth);
                         newMonster = new Monster(type, health);
@@ -41,7 +41,7 @@ public class App
                         newCave.listMonsters();
                         break;
                     case 0:
-                        System.out.println("Kiitos ohjelman käytöstä");
+                        System.out.println("Peli päättyy. Kiitos pelaamisesta!");
                         exit = true;
                         break;
                     default:

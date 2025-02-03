@@ -11,8 +11,12 @@ public class Cave {
 
     public void listMonsters() {
         int i = 0;
-        for (Monster monster : monsters) {
-            monster.printInfo(i++);
+        if (monsters.isEmpty()){
+            System.out.println("Luola on tyhjä.");
+        } else {
+            for (Monster monster : monsters) {
+                monster.printInfo(i++);
+            }
         }
     }
 }
