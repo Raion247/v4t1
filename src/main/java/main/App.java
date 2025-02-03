@@ -6,11 +6,12 @@ public class App
 {
     public static void main(String[] args) {
         Monster newMonster = null;
+        Player newPlayer = null;
         Cave newCave = new Cave();
         Scanner sc = new Scanner(System.in);
         System.out.println("Syötä pelaajan nimi:");
         String name = sc.nextLine();
-        Player newPlayer = new Player(name);
+        newPlayer = new Player(name);
         boolean exit = false;
         while(!exit) {
             System.out.println("1) Lisää luolaan hirviö");
@@ -29,7 +30,7 @@ public class App
                     case 1:
                         System.out.println("Anna hirviön tyyppi:");
                         String type = sc.nextLine();
-                        System.out.println("Anna hirviön elämän määrä numeroina");
+                        System.out.println("Anna hirviön elämän määrä numeroina:");
                         String stringHealth = sc.nextLine();
                         int health = Integer.parseInt(stringHealth);
                         newMonster = new Monster(type, health);
